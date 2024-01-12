@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product: <%= reqprd.name %></title>
+</head>
+<body>
+    <h1><%= reqprd.name %></h1>
+    <ul>
+        <li><h3>price : Rs. <%= reqprd.price %> </h3></li>
+        <li>category: <a href="/products?category=<%= reqprd.category %>"><%= reqprd.category %></a></li>
+        
+    </ul>
+    <a href="/products/<%= reqprd._id %>/edit"> Edit Product</a>
+    <a href="/products"> Back to all Products</a>
+    <form action="/products/<%= reqprd._id %>?_method=DELETE" method="post">
+    <button>DELETE</button>
+    </form>
+</body>
+</html>
